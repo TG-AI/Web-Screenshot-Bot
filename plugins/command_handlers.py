@@ -35,7 +35,7 @@ async def start(_: Client, message: Message) -> None:
         "I can render website of a given link to either PDF or PNG/JPEG</b>",
         quote=True,
         reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("❓ About", callback_data="about_cb")
+                InlineKeyboardButton("❓ Help", callback_data="about_cb")
             ]
         ])
     )
@@ -46,14 +46,18 @@ async def feedback(_: Client, message: Message) -> None:
     LOGGER.debug(f"USED_CMD --> /about command >> @{message.from_user.username}")
     await message.reply_text(
         text="This project is open ❤️ source",
-        reply_markup=InlineKeyboardMarkup([
+        reply_markup=InlineKeyboardMarkup(
             [
-                InlineKeyboardButton("👨🏻‍🦯 Source", url="https://github.com/alenpaul2001/Web-Screenshot-Bot"),
-                InlineKeyboardButton("❓ Bug Report", url="https://github.com/alenpaul2001/Web-Screenshot-Bot/issues")],
-            [InlineKeyboardButton(
-                "🌃 Profile Icon Credit",
-                url="https://www.goodfon.com/wallpaper/art-vector-background-illustration-minimalism-angga-tanta-12.html")]
-            ])
+                [
+                    InlineKeyboardButton('📌  Support Group', url='https://t.me/AI_BOT_HELP'),
+                    InlineKeyboardButton('🔖  Projects Channel', url='https://t.me/AI_bot_projects')
+                ],
+                [
+                    InlineKeyboardButton('💡  Supported urls', url='https://rentry.co/prub9/'),
+                    InlineKeyboardButton('👨  Master', url='https://t.me/pppppgame')
+                ]
+            ]
+        )
     )
 
 
