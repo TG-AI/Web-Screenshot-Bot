@@ -35,7 +35,7 @@ async def start(_: Client, message: Message) -> None:
         "I can render website of a given link to either PDF or PNG/JPEG</b>",
         quote=True,
         reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton("❓ Help ❓", callback_data="about_cb")
+                InlineKeyboardButton("❓ Help ❓", callback_data="about_cb"),
                 InlineKeyboardButton('🔧 Projects Channel 🔧', url='https://t.me/AI_bot_projects')
             ]
         ])
